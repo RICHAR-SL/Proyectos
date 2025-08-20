@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 Sistema Avanzado de Detección Emocional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🧠 Sistema Avanzado de Detección Emocional</h1>
+        <p>✨ Analiza imágenes o usa tu cámara para detectar emociones.</p>
+        <hr>
+    </div>
+
+    <!-- Aquí se montará Gradio -->
+    <div id="gradio-interface"></div>
+    
+    <script type="module">
+        import { mountGradioApp } from "https://gradio.s3-us-west-2.amazonaws.com/3.48.0/gradio.js";
+        mountGradioApp(document.getElementById("gradio-interface"), "app:demo");
+    </script>
+</body>
+</html>
